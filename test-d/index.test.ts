@@ -1,6 +1,6 @@
 import { expectType } from "tsd";
 import { z } from "zod";
-import is, { validate } from "../source/index.js";
+import is, { validate } from "../src/index.js";
 
 const user = z.object({
   name: z.string(),

@@ -1,6 +1,6 @@
-import { test, expect } from "@jest/globals";
-import z from "zod";
-import is, { validate } from "../source/index.js";
+import { z } from "zod";
+import { expect, test } from "vitest";
+import is, { validate } from "../src/index.js";
 
 const user = z.object({
   name: z.string(),
@@ -17,4 +17,3 @@ test("validate", () => {
   const isUser = validate(user);
   expect(isUser(value)).toBe(true);
 });
-
